@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ scrollToSection, aboutMeRef }) => {
   return (
-    <div className="flex flex-row bg-primary-800 items-center justify-center h-screen bg-gradient-to-b from-primary-900">
+    <div className="flex flex-row bg-primary-800 items-center justify-center  bg-gradient-to-b from-primary-900 h-screen">
       <div className="p-12 text-center">
         <Typography
           variant="title"

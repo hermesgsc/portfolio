@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full overflow-hidden select-none relative">
+    <section className="w-full overflow-hidden ">
       <div className="relative z-10">
         {isLoading ? (
           <div className="flex items-center justify-center h-screen w-screen overflow-hidden bg-primary-50">

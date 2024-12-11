@@ -40,9 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <nav className="bg-primary-900 fixed p-4 w-full">
       <div className="flex justify-between items-center">
-        <div className="text-xl select-none text-white sm:hidden">
-          Hermes dev
-        </div>
+        <div className="text-xl  text-white sm:hidden">Hermes dev</div>
 
         <ol className="justify-center space-x-12 text-primary-100 hidden md:flex w-full">
           <li
@@ -118,7 +116,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <Icon icon="mdi:close" width="32" height="32" />
           </button>
         </div>
-        <ol className="space-y-12 text-primary-100 justify-center w-full select-none">
+        <ol className="space-y-12 text-primary-100 justify-center w-full ">
           <li
             className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => {

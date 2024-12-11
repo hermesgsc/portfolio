@@ -6,8 +6,10 @@ const skillsData = [
   { name: "Express", icon: "simple-icons:express" },
   { name: "MongoDB", icon: "flowbite:mongo-db-solid" },
   { name: "PostgreSQL", icon: "simple-icons:postgresql" },
+  { name: "Prisma", icon: "lineicons:prisma" },
   { name: "React", icon: "uim:react" },
   { name: "Tailwind", icon: "lineicons:tailwindcss" },
+
 ];
 
 export default skillsData
