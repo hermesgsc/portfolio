@@ -41,9 +41,9 @@ const projectsData: Project[] = [
       },
       {
         name: "Next",
-        bg: "bg-accent-100",
-        border: "border-accent-200",
-        text: "text-accent-700",
+        bg: "bg-primary-500",
+        border: "border-primary-200",
+        text: "text-prymary-700",
       },
       {
         name: "Tailwind",
@@ -79,9 +79,9 @@ const projectsData: Project[] = [
       },
       {
         name: "Next",
-        bg: "bg-accent-100",
-        border: "border-accent-200",
-        text: "text-accent-700",
+        bg: "bg-secondary-100",
+        border: "border-secondary-200",
+        text: "text-secondary-700",
       },
       {
         name: "Tailwind",
@@ -117,9 +117,9 @@ const projectsData: Project[] = [
       },
       {
         name: "Next",
-        bg: "bg-accent-100",
-        border: "border-accent-200",
-        text: "text-accent-700",
+        bg: "bg-secondary-100",
+        border: "border-secondary-200",
+        text: "text-secondary-700",
       },
       {
         name: "Tailwind",

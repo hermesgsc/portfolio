@@ -5,7 +5,7 @@ import { Fira_Code } from "next/font/google";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // Pesos que você quer carregar
+  weight: ["400", "500", "700"],
 });
 export const metadata: Metadata = {
   title: "Hermes dev",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firaCode?.variable} antialiased`}>{children}</body>
+      <body className={`${firaCode?.className} antialiased`}>{children}</body>
     </html>
   );
 }

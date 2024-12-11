@@ -17,9 +17,9 @@ interface EncryptButtonProps {
 
 const EncryptButton: React.FC<EncryptButtonProps> = ({
   targetText = "Know me",
-  cyclesPerLetter = 5,
-  shuffleTime = 50,
-  chars = "!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{",
+  cyclesPerLetter = 1,
+  shuffleTime = 30,
+  chars = "!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!@#$%^&*()_+}{}{!",
   onClick,
 }) => {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -59,14 +59,14 @@ const EncryptButton: React.FC<EncryptButtonProps> = ({
 
   return (
     <motion.button
-      whileHover={{ scale: 1.0 }}
+      whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.975 }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
       onClick={onClick}
-      className="bg-secondary-800 rounded-xl border-secondary-700 border gap-3 group relative overflow-hidden px-4 py-2 font-medium text-secondary-300 transition-colors hover:text-primary-500"
+      className="bg-primary-800 rounded-xl border-primary-600 border gap-3 group  overflow-hidden px-6 py-2 font-medium text-primary-200 transition-colors hover:text-secondary-500"
     >
-      <div className="relative z-10 flex items-center gap-2">
+      <div className=" z-10 flex items-center gap-2">
         <Typography className="text-sm">{text}</Typography>
         <Icon
           className="hover:text-primary-500"

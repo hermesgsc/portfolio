@@ -21,10 +21,10 @@ const Typography: React.FC<TypographyProps> = ({
   ...props
 }) => {
   const variantClasses: { [key: string]: string } = {
-    title: "text-4xl font-extrabold text-primary-900 dark:text-primary-100",
-    subtitle: "text-2xl font-semibold text-primary-800 dark:text-primary-200",
-    body: "text-base font-normal text-secondary-700 dark:text-secondary-300",
-    caption: "text-sm font-light text-secondary-600 dark:text-secondary-400",
+    title: "text-4xl font-extrabold",
+    subtitle: "text-2xl font-semibold ",
+    body: "text-base font-normal ",
+    caption: "text-sm font-light ",
   };
 
   const weightClasses: { [key: string]: string } = {

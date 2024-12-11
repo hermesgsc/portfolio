@@ -30,7 +30,7 @@ const AboutMe: React.FC = () => {
             I&apos;m 21 years old, and I&apos;m currently studying Systems
             Analysis and Development. I&apos;m a full-stack developer at
             BlackPay, working on both the frontend and backend, and I live in{" "}
-            <strong className="text-accent-500 font-medium select-none">
+            <strong className=" font-medium select-none">
               Brazil
             </strong>
             . I started my journey in front-end web development but quickly

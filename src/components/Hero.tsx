@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, aboutMeRef }) => {
           >
             and I&apos;m a
           </Typography>
-          <div className="text-accent-300 font-bold max-w-[520px] text-base sm:text-base md:text-xl">
+          <div className="text-secondary-500 font-bold max-w-[520px] text-base sm:text-base md:text-xl">
             <Typewriter
               options={{
                 strings: [

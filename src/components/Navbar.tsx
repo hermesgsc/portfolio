@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-primary-700 p-4 w-full">
+    <nav className="bg-primary-900 fixed p-4 w-full">
       <div className="flex justify-between items-center">
         <div className="text-xl select-none text-white sm:hidden">
           Hermes dev
@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
         <ol className="justify-center space-x-12 text-primary-100 hidden md:flex w-full">
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => scrollToSection(aboutMeRef)}
           >
             <Typography variant="body" weight="normal" align="center">
@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </li>
 
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => scrollToSection(skillsRef)}
           >
             <Typography variant="body" weight="normal" align="center">
@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </li>
 
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => scrollToSection(projectsRef)}
           >
             <Typography variant="body" weight="normal" align="center">
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </li>
 
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => scrollToSection(contactRef)}
           >
             <Typography variant="body" weight="normal" align="center">
@@ -120,7 +120,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
         <ol className="space-y-12 text-primary-100 justify-center w-full select-none">
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => {
               scrollToSection(aboutMeRef);
               toggleMenu();
@@ -131,7 +131,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </Typography>
           </li>
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className=" transition-colors duration-300 cursor-pointer"
             onClick={() => {
               scrollToSection(skillsRef);
               toggleMenu();
@@ -142,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </Typography>
           </li>
           <li
-            className="hover:text-white transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => {
               scrollToSection(projectsRef);
               toggleMenu();
@@ -153,7 +153,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </Typography>
           </li>
           <li
-            className="hover:text-primary-500 transition-colors duration-300 cursor-pointer"
+            className="hover:text-secondary-500 transition-colors duration-300 cursor-pointer"
             onClick={() => {
               scrollToSection(contactRef);
               toggleMenu();
