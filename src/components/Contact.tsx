@@ -7,10 +7,10 @@ import Card from "./Card";
 
 const Contact: React.FC = () => {
   return (
-    <section className="p-6 bg-primary-800 flex items-center  justify-center">
+    <section className="p-6 bg-primary-800 flex items-center  justify-center md:">
       <Card className="p-6 border-primary-500 w-full max-w-2xl mx-auto bg-primary-700 shadow-lg rounded-xl">
         <div className="p-8">
-          <div className="space-y-4 mb-6">
+          <div className="space-y-8 mb-6">
             <Typography
               variant="subtitle"
               weight="bold"
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
             </Typography>
           </div>
 
-          <form className="space-y-4">
+          <form className="space-y-4 pt-6">
             <div className="space-y-2">
               <Typography
                 variant="caption"
