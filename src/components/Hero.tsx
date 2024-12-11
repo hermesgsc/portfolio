@@ -44,6 +44,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, aboutMeRef }) => {
                 loop: true,
                 delay: 40,
                 deleteSpeed: 20,
+                cursor: "",
               }}
             />
           </div>
