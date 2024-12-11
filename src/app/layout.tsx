@@ -8,7 +8,7 @@ const firaCode = Fira_Code({
   weight: ["400", "500", "700"],
 });
 export const metadata: Metadata = {
-  title: "Hermes dev",
+  title: "Hermes Gabriel",
   description: "Hermes Gabriel - Portifolio fullstack developer",
 };
 
