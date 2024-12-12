@@ -150,13 +150,17 @@ const Contact: React.FC = () => {
                   : "bg-red-200 text-red-600 border-red-600 border rounded-md"
               }`}
             >
-              <div className="flex items-center">
+              <div className="flex items-center space-x-3">
+                <Icon
+                  height={32}
+                  icon={statusType === "success" ? "ei:check" : "material-symbols-light:error-outline"}
+                />
                 <Typography variant="caption">{status}</Typography>
               </div>
               <Icon
                 onClick={closeStatus}
-                className="text-primary-900 hover:cursor-pointer rounded-full hover:text-primary-300 transition-all"
-                icon={"material-symbols-light:close"}
+                className="hover:cursor-pointer rounded-full hover:text-primary-300 transition-all"
+                icon="material-symbols-light:close"
                 height={32}
                 width={32}
               />

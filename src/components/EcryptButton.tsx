@@ -64,7 +64,7 @@ const EncryptButton: React.FC<EncryptButtonProps> = ({
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
       onClick={onClick}
-      className="bg-primary-800 rounded-xl border-primary-600 border gap-3 group  overflow-hidden px-6 py-2 font-medium text-primary-200 transition-colors hover:text-secondary-500"
+      className="bg-primary-700 rounded-xl border-primary-500 border gap-3 group  overflow-hidden px-6 py-2 font-medium text-primary-200 transition-colors hover:text-secondary-500"
     >
       <div className=" z-10 flex items-center gap-2">
         <Typography className="text-sm">{text}</Typography>
