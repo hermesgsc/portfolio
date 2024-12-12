@@ -79,9 +79,7 @@ The project code is organized as follows:
 - **components/**: Reusable components, such as `Navbar`, `Hero`, `AboutMe`, `Skills`, `Projects`, `Contact`, and `Footer`.
 - **public/**: Images, icons, and fonts used in the project.
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
@@ -162,7 +160,4 @@ O código do projeto está organizado da seguinte forma:
 - **components/**: Componentes reutilizáveis, como `Navbar`, `Hero`, `AboutMe`, `Skills`, `Projects`, `Contact`, e `Footer`.
 - **public/**: Imagens, ícones e fontes usadas no projeto.
 
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
