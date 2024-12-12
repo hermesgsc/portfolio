@@ -9,7 +9,7 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "Hermes Gabriel",
-  description: "Hermes Gabriel - Portifolio fullstack developer",
+  description: "Hermes Gabriel - Fullstack Developer",
 };
 
 export default function RootLayout({
