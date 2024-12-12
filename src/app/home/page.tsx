@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
     <section className="w-full overflow-hidden ">
       <div className="relative z-10">
         {isLoading ? (
-          <div className="flex items-center justify-center h-screen w-screen overflow-hidden bg-primary-50">
+          <div className="flex items-center justify-center min-h-screen w-screen overflow-hidden bg-primary-50">
             <DotLottieReact
               src="https://lottie.host/ef5ec194-7222-4a98-90ff-9b07f4466594/Swcz5q6UBG.lottie"
               loop
