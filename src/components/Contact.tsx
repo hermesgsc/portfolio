@@ -1,13 +1,71 @@
-"use client";
-
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/react";
 import Typography from "./Typography";
 import Card from "./Card";
 
 const Contact: React.FC = () => {
+  const [status, setStatus] = useState<string>("");
+  const [statusType, setStatusType] = useState<"success" | "error" | "">("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (
+      !process.env.REACT_APP_EMAILJS_SERVICE_ID ||
+      !process.env.REACT_APP_EMAILJS_TEMPLATE_ID ||
+      !process.env.REACT_APP_EMAILJS_USER_ID
+    ) {
+      console.error(
+        "EmailJS configuration is missing in environment variables"
+      );
+      setStatus("Error: EmailJS configuration missing");
+      setStatusType("error");
+      return;
+    }
+
+    setLoading(true);
+
+    const formData = new FormData(form.current as HTMLFormElement);
+    console.log("Form data:", formData);
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        form.current as HTMLFormElement,
+        process.env.REACT_APP_EMAILJS_USER_ID!
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Message sent successfully!",
+            response.status,
+            response.text
+          );
+          setStatus("Message sent successfully!");
+          setStatusType("success");
+          setLoading(false);
+          form.current?.reset();
+        },
+        (error) => {
+          console.log("Error sending the message:", error.text);
+          setStatus("Error sending the message. Please try again.");
+          setStatusType("error");
+          setLoading(false);
+        }
+      );
+  };
+
+  const closeStatus = () => {
+    setStatus("");
+    setStatusType("");
+  };
+
   return (
-    <section className="p-6 bg-primary-800 flex items-center  justify-center md:">
+    <section className="p-6 bg-primary-800 flex items-center justify-center">
       <Card className="p-6 border-primary-500 w-full max-w-2xl mx-auto bg-primary-700 shadow-lg rounded-xl">
         <div className="p-8">
           <div className="space-y-8 mb-6">
@@ -30,7 +88,7 @@ const Contact: React.FC = () => {
             </Typography>
           </div>
 
-          <form className="space-y-4 pt-6">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4 pt-6">
             <div className="space-y-2">
               <Typography
                 variant="caption"
@@ -40,8 +98,10 @@ const Contact: React.FC = () => {
                 Name
               </Typography>
               <input
-                id="name"
+                type="text"
+                name="user_name"
                 className="w-full px-3 py-2 border border-primary-500 rounded-md shadow-sm focus:outline-none focus:ring-0 bg-primary-600 text-white"
+                required
               />
             </div>
 
@@ -54,23 +114,10 @@ const Contact: React.FC = () => {
                 Email
               </Typography>
               <input
-                id="email"
                 type="email"
+                name="user_email"
                 className="w-full px-3 py-2 border border-primary-500 rounded-md shadow-sm focus:outline-none focus:ring-0 bg-primary-600 text-white"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Typography
-                variant="caption"
-                as="label"
-                className="block text-primary-300"
-              >
-                Subject
-              </Typography>
-              <input
-                id="subject"
-                className="w-full px-3 py-2 border border-primary-500 rounded-md shadow-sm focus:outline-none focus:ring-0 bg-primary-600 text-white"
+                required
               />
             </div>
 
@@ -83,8 +130,9 @@ const Contact: React.FC = () => {
                 Message
               </Typography>
               <textarea
-                id="message"
+                name="message"
                 className="w-full px-3 py-2 border border-primary-500 rounded-md shadow-sm focus:outline-none focus:ring-0 h-32 resize-none bg-primary-600 text-white"
+                required
               ></textarea>
             </div>
 
@@ -96,34 +144,32 @@ const Contact: React.FC = () => {
             </button>
           </form>
 
-          <div className="flex justify-center space-x-4 mt-8">
-            <a
-              href="https://github.com/hermesgsc"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="text-primary-300 hover:text-secondary-600 transition-colors duration-300"
+          {loading && (
+            <div className="mt-6 flex text-center items-center justify-center">
+              <Icon icon={"line-md:loading-twotone-loop"} height={32} />
+            </div>
+          )}
+
+          {status && !loading && (
+            <div
+              className={`mt-6 text-center p-3 flex justify-between items-center px-6 transition-all duration-300 ${
+                statusType === "success"
+                  ? "bg-emerald-200 text-emerald-600 border border-emerald-600 rounded-md"
+                  : "bg-red-200 text-red-600 border-red-600 border rounded-md"
+              }`}
             >
-              <Icon icon="mdi:github" width="24" height="24" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hermes-gabriel-78410b232/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-primary-300 hover:text-secondary-600 transition-colors duration-300"
-            >
-              <Icon icon="mdi:linkedin" width="24" height="24" />
-            </a>
-            <a
-              href="mailto:hermesg.dev@gmail.com"
-              target="blank"
-              aria-label="Email"
-              className="text-primary-300 hover:text-secondary-600 transition-colors duration-300"
-            >
-              <Icon icon="mingcute:mail-line" width="24" height="24" />
-            </a>
-          </div>
+              <div className="flex items-center">
+                <p>{status}</p>
+              </div>
+              <Icon
+                onClick={closeStatus}
+                className="text-primary-900 hover:cursor-pointer rounded-full hover:text-primary-300 transition-all"
+                icon={"material-symbols-light:close"}
+                height={32}
+                width={32}
+              />
+            </div>
+          )}
         </div>
       </Card>
     </section>
