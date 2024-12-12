@@ -13,7 +13,6 @@ import Footer from "@/components/Footer";
 const HomePage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Declare as referências corretamente
   const aboutMeRef = useRef<HTMLDivElement>(undefined!);
   const projectsRef = useRef<HTMLDivElement>(undefined!);
   const skillsRef = useRef<HTMLDivElement>(undefined!);

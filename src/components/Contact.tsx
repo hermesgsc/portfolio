@@ -10,17 +10,14 @@ const Contact: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const form = useRef<HTMLFormElement>(null);
 
+  const serviceId = "4370c922-6d75-4c38-9e76";
+  const templateId = "template_pghez02";
+  const userId = "hNfjejglG0lWFAS2r";
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (
-      !process.env.REACT_APP_EMAILJS_SERVICE_ID ||
-      !process.env.REACT_APP_EMAILJS_TEMPLATE_ID ||
-      !process.env.REACT_APP_EMAILJS_USER_ID
-    ) {
-      console.error(
-        "EmailJS configuration is missing in environment variables"
-      );
+    if (!serviceId || !templateId || !userId) {
       setStatus("Error: EmailJS configuration missing");
       setStatusType("error");
       return;
@@ -32,12 +29,7 @@ const Contact: React.FC = () => {
     console.log("Form data:", formData);
 
     emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
-        form.current as HTMLFormElement,
-        process.env.REACT_APP_EMAILJS_USER_ID!
-      )
+      .sendForm(serviceId, templateId, form.current as HTMLFormElement, userId)
       .then(
         (response) => {
           console.log(
@@ -159,7 +151,7 @@ const Contact: React.FC = () => {
               }`}
             >
               <div className="flex items-center">
-                <p>{status}</p>
+                <Typography variant="caption">{status}</Typography>
               </div>
               <Icon
                 onClick={closeStatus}
