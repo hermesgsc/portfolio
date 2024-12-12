@@ -1,4 +1,3 @@
-Claro! Abaixo estão as versões do README em inglês e português com as seções de "Deploy" e "Melhorias Futuras" removidas.
 
 ---
 
