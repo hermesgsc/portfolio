@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
               <Skills />
             </div>
             <div ref={projectsRef}>
-              <Projects />
+              {/* <Projects /> */}
             </div>
             <div ref={contactRef}>
               <Contact />
