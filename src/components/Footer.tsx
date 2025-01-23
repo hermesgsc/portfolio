@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <Icon icon="mdi:github" width="26" height="26" />
           </a>
           <a
-            href="https://www.linkedin.com/in/hermes-gabriel-78410b232/"
+            href="https://www.linkedin.com/in/hermesgsc/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-secondary-600 transition-colors duration-300 cursor-pointer"

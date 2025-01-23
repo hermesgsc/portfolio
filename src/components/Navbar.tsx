@@ -172,7 +172,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <Icon icon="mdi:github" width="30" height="30" />
           </a>
           <a
-            href="https://www.linkedin.com/in/hermes-gabriel-78410b232/"
+            href="https://www.linkedin.com/in/hermesgsc/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-300 hover:text-white transition-colors duration-300 cursor-pointer"
