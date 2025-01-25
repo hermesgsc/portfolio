@@ -6,9 +6,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
-// import Projects from "@/components/Projects"
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
 
 const HomePage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -64,8 +64,9 @@ const HomePage: React.FC = () => {
             <div ref={skillsRef}>
               <Skills />
             </div>
+
             <div ref={projectsRef}>
-              {/* <Projects /> */}
+              <Projects />
             </div>
             <div ref={contactRef}>
               <Contact />
