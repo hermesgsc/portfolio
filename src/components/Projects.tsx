@@ -67,9 +67,9 @@ export const projectsData: Project[] = [
       },
       {
         name: "NestJS",
-        bg: "bg-yellow-300",
-        border: "border-yellow-500",
-        text: "text-yellow-900",
+        bg: "bg-red-300", // Red color for NestJS
+        border: "border-red-500", // Red border
+        text: "text-red-900", // Red text
       },
       {
         name: "Prisma",
@@ -118,7 +118,7 @@ const Projects: React.FC = () => {
           user-centric applications, leveraging the latest web technologies.
         </Typography>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-1 gap-6 p-6">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 p-6"> {/* Updated for 2-column layout */}
           {projectsData.map((project, index) => (
             <div
               key={index}
