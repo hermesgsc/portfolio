@@ -59,9 +59,9 @@ export const projectsData: Project[] = [
     technologies: [
       {
         name: "TypeScript",
-        bg: "bg-blue-300",
-        border: "border-blue-500",
-        text: "text-blue-900",
+        bg: "bg-cyan-300",
+        border: "border-cyan-500",
+        text: "text-cyan-900",
       },
       {
         name: "Next.js",
