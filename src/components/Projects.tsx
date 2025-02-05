@@ -3,7 +3,6 @@ import { Icon } from "@iconify/react";
 import Card from "./Card";
 import Typography from "./Typography";
 
-// Type definitions for Project and Technology
 interface Project {
   title: string;
   description: string;
@@ -19,7 +18,6 @@ interface Technology {
   text: string;
 }
 
-// Array of projects including "MoneyPlan"
 export const projectsData: Project[] = [
   {
     title: "Library-API",
@@ -60,6 +58,12 @@ export const projectsData: Project[] = [
       "MoneyPlan is a complete financial management tool that helps users track their income and expenses, set budgets, plan savings, and visualize their financial health with interactive graphs. Built with Next.js, NestJS, Prisma, and PostgreSQL, it offers real-time budget tracking, customizable alerts, and insightful reports to plan your financial future effectively.",
     technologies: [
       {
+        name: "TypeScript",
+        bg: "bg-blue-300",
+        border: "border-blue-500",
+        text: "text-blue-900",
+      },
+      {
         name: "Next.js",
         bg: "bg-white",
         border: "border-gray-500",
@@ -67,9 +71,9 @@ export const projectsData: Project[] = [
       },
       {
         name: "NestJS",
-        bg: "bg-red-300", // Red color for NestJS
-        border: "border-red-500", // Red border
-        text: "text-red-900", // Red text
+        bg: "bg-red-300", 
+        border: "border-red-500", 
+        text: "text-red-900", 
       },
       {
         name: "Prisma",
