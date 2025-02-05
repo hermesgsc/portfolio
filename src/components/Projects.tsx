@@ -3,11 +3,12 @@ import { Icon } from "@iconify/react";
 import Card from "./Card";
 import Typography from "./Typography";
 
+// Type definitions for Project and Technology
 interface Project {
   title: string;
   description: string;
   technologies: Technology[];
-  deployUrl: string;
+  deployUrl: string | undefined;
   repositoryUrl: string;
 }
 
@@ -18,6 +19,7 @@ interface Technology {
   text: string;
 }
 
+// Array of projects including "MoneyPlan"
 export const projectsData: Project[] = [
   {
     title: "Library-API",
@@ -52,9 +54,43 @@ export const projectsData: Project[] = [
     repositoryUrl: "https://github.com/hermesgsc/books-api-rest",
     deployUrl: "",
   },
+  {
+    title: "MoneyPlan",
+    description:
+      "MoneyPlan is a complete financial management tool that helps users track their income and expenses, set budgets, plan savings, and visualize their financial health with interactive graphs. Built with Next.js, NestJS, Prisma, and PostgreSQL, it offers real-time budget tracking, customizable alerts, and insightful reports to plan your financial future effectively.",
+    technologies: [
+      {
+        name: "Next.js",
+        bg: "bg-white",
+        border: "border-gray-500",
+        text: "text-black",
+      },
+      {
+        name: "NestJS",
+        bg: "bg-yellow-300",
+        border: "border-yellow-500",
+        text: "text-yellow-900",
+      },
+      {
+        name: "Prisma",
+        bg: "bg-blue-300",
+        border: "border-blue-500",
+        text: "text-blue-900",
+      },
+      {
+        name: "PostgreSQL",
+        bg: "bg-green-300",
+        border: "border-green-500",
+        text: "text-green-900",
+      },
+    ],
+    repositoryUrl: "https://github.com/hermesgsc/money-plan",
+    deployUrl: "https://money-plan.vercel.app/",
+  },
 ];
 
 const Projects: React.FC = () => {
+  // Function to handle button clicks (open URLs)
   const handleButtonClick = (url: string | undefined) => {
     if (url) {
       window.open(url, "_blank"); // Open the URL in a new tab
