@@ -122,13 +122,13 @@ const Projects: React.FC = () => {
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col border-none p-6 rounded-[10px] gap-3 bg-primary-800 shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col h-full border-none p-6 rounded-[10px] gap-3 bg-primary-800 shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <Typography variant="body" className="text-primary-100 pt-6">
                 {project.title}
               </Typography>
               <Typography
-                className="text-primary-300"
+                className="text-primary-300 overflow-hidden line-clamp-4" // Added line-clamp for description
                 align="left"
                 variant="caption"
               >
@@ -147,7 +147,7 @@ const Projects: React.FC = () => {
                 ))}
               </div>
 
-              <div>
+              <div className="mt-auto"> {/* Ensure buttons are pushed to the bottom */}
                 {project.deployUrl ? (
                   <button
                     onClick={() => handleButtonClick(project.deployUrl)}
