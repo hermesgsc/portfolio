@@ -71,9 +71,9 @@ export const projectsData: Project[] = [
       },
       {
         name: "NestJS",
-        bg: "bg-red-300", 
-        border: "border-red-500", 
-        text: "text-red-900", 
+        bg: "bg-red-300",
+        border: "border-red-500",
+        text: "text-red-900",
       },
       {
         name: "Prisma",
@@ -88,7 +88,7 @@ export const projectsData: Project[] = [
         text: "text-green-900",
       },
     ],
-    repositoryUrl: "https://github.com/hermesgsc/money-plan",
+    repositoryUrl: "",
     deployUrl: "https://money-plan.vercel.app/",
   },
 ];
@@ -122,7 +122,9 @@ const Projects: React.FC = () => {
           user-centric applications, leveraging the latest web technologies.
         </Typography>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 p-6"> {/* Updated for 2-column layout */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+          {" "}
+          {/* Updated for 2-column layout */}
           {projectsData.map((project, index) => (
             <div
               key={index}
@@ -151,7 +153,9 @@ const Projects: React.FC = () => {
                 ))}
               </div>
 
-              <div className="mt-auto"> {/* Ensure buttons are pushed to the bottom */}
+              <div className="mt-auto">
+                {" "}
+                {/* Ensure buttons are pushed to the bottom */}
                 {project.deployUrl ? (
                   <button
                     onClick={() => handleButtonClick(project.deployUrl)}
@@ -161,7 +165,6 @@ const Projects: React.FC = () => {
                     <Icon icon="mingcute:rocket-line" width="24" height="24" />
                   </button>
                 ) : null}
-
                 <button
                   onClick={() => handleButtonClick(project.repositoryUrl)}
                   className="flex items-center justify-between w-full mt-3 rounded-xl border text-primary-200 border-primary-500 p-3 hover:bg-secondary-800 hover:border-secondary-300 hover:text-primary-50 transition-all duration-300"
