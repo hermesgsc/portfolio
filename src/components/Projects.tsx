@@ -134,7 +134,7 @@ const Projects: React.FC = () => {
                 {project.title}
               </Typography>
               <Typography
-                className="text-primary-300 overflow-hidden line-clamp-4" // Added line-clamp for description
+                className="text-primary-300 overflow-hidden line-clamp-4"
                 align="left"
                 variant="caption"
               >
@@ -155,8 +155,7 @@ const Projects: React.FC = () => {
 
               <div className="mt-auto">
                 {" "}
-                {/* Ensure buttons are pushed to the bottom */}
-                {project.deployUrl ? (
+                {project.deployUrl !== "" && (
                   <button
                     onClick={() => handleButtonClick(project.deployUrl)}
                     className="flex p-3 items-center justify-between w-full mt-3 rounded-xl border text-primary-200 border-primary-500 gap-3 transition-all duration-300 hover:bg-primary-600 hover:border-secondary-800 hover:text-primary-50"
@@ -164,14 +163,16 @@ const Projects: React.FC = () => {
                     Deploy
                     <Icon icon="mingcute:rocket-line" width="24" height="24" />
                   </button>
-                ) : null}
-                <button
-                  onClick={() => handleButtonClick(project.repositoryUrl)}
-                  className="flex items-center justify-between w-full mt-3 rounded-xl border text-primary-200 border-primary-500 p-3 hover:bg-secondary-800 hover:border-secondary-300 hover:text-primary-50 transition-all duration-300"
-                >
-                  Repository
-                  <Icon icon={"mdi:github"} height={24} />
-                </button>
+                )}
+                {project.repositoryUrl !== "" && (
+                  <button
+                    onClick={() => handleButtonClick(project.repositoryUrl)}
+                    className="flex items-center justify-between w-full mt-3 rounded-xl border text-primary-200 border-primary-500 p-3 hover:bg-secondary-800 hover:border-secondary-300 hover:text-primary-50 transition-all duration-300"
+                  >
+                    Repository
+                    <Icon icon={"mdi:github"} height={24} />
+                  </button>
+                )}
               </div>
             </div>
           ))}
