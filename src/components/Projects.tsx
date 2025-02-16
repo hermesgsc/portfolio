@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
   {
     title: "Library-API",
     description:
-      "A RESTful API built for managing book resources, enabling seamless operations for listing, registering, updating, and deleting books in a database. This system utilizes Node.js, Express, MongoDB, and JavaScript to deliver a fast and scalable solution for book management.",
+      "A RESTful API built for managing book resources, enabling CRUD operations.",
     technologies: [
       {
         name: "Node.js",
@@ -55,7 +55,7 @@ export const projectsData: Project[] = [
   {
     title: "MoneyPlan",
     description:
-      "MoneyPlan is a complete financial management tool that helps users track their income and expenses, set budgets, plan savings, and visualize their financial health with interactive graphs. Built with Next.js, NestJS, Prisma, and PostgreSQL, it offers real-time budget tracking, customizable alerts, and insightful reports to plan your financial future effectively.",
+      "MoneyPlan is a complete financial management tool that helps users track their income and expenses.",
     technologies: [
       {
         name: "TypeScript",
@@ -94,10 +94,9 @@ export const projectsData: Project[] = [
 ];
 
 const Projects: React.FC = () => {
-  // Function to handle button clicks (open URLs)
   const handleButtonClick = (url: string | undefined) => {
     if (url) {
-      window.open(url, "_blank"); // Open the URL in a new tab
+      window.open(url, "_blank");
     } else {
       alert("URL not available for this project.");
     }
