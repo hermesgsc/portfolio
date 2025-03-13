@@ -20,7 +20,7 @@ interface Technology {
 
 export const projectsData: Project[] = [
   {
-    title: "Library-API",
+    title: "Library - API",
     description:
       "A RESTful API built for managing book resources, enabling CRUD operations.",
     technologies: [
@@ -70,6 +70,39 @@ export const projectsData: Project[] = [
         text: "text-black",
       },
       {
+        name: "Tailwind.css",
+        bg: "bg-blue-300",
+        border: "border-blue-500",
+        text: "text-blue-900",
+      },
+      {
+        name: "Prisma",
+        bg: "bg-blue-300",
+        border: "border-blue-500",
+        text: "text-blue-900",
+      },
+      {
+        name: "PostgreSQL",
+        bg: "bg-green-300",
+        border: "border-green-500",
+        text: "text-green-900",
+      },
+    ],
+    repositoryUrl: "https://github.com/hermesgsc/money-plan",
+    deployUrl: "https://money-plan.vercel.app/",
+  },
+  {
+    title: "MoneyPlan - API",
+    description:
+    "MoneyPlan is a complete financial management tool that helps users track their income and expenses.",
+    technologies: [
+      {
+        name: "TypeScript",
+        bg: "bg-cyan-300",
+        border: "border-cyan-500",
+        text: "text-cyan-900",
+      },
+      {
         name: "NestJS",
         bg: "bg-red-300",
         border: "border-red-500",
@@ -88,7 +121,7 @@ export const projectsData: Project[] = [
         text: "text-green-900",
       },
     ],
-    repositoryUrl: "",
+    repositoryUrl: "https://github.com/hermesgsc/money-plan-api",
     deployUrl: "https://money-plan.vercel.app/",
   },
 ];
