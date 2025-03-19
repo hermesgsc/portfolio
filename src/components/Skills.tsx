@@ -29,7 +29,7 @@ const Skills: React.FC = () => {
           {skillsData.map((skill, index) => (
             <Card
               key={index}
-              className="p-3 flex flex-row items-center text-primary-300 border-primary-500 gap-3 justify-between  transition-all duration-300 rounded-xl hover:bg-primary-600 hover:border-secondary-800 hover:text-primary-50"
+              className="border-[0.1px] p-3 flex flex-row items-center text-primary-300 border-primary-500 gap-3 justify-between  transition-all duration-300 rounded-xl hover:bg-primary-600 hover:border-secondary-800 hover:text-primary-50"
             >
               <Typography size="small" variant="caption">
                 {skill.name}
