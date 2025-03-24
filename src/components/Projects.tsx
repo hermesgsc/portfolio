@@ -75,18 +75,6 @@ export const projectsData: Project[] = [
         border: "border-blue-500",
         text: "text-blue-900",
       },
-      {
-        name: "Prisma",
-        bg: "bg-blue-300",
-        border: "border-blue-500",
-        text: "text-blue-900",
-      },
-      {
-        name: "PostgreSQL",
-        bg: "bg-green-300",
-        border: "border-green-500",
-        text: "text-green-900",
-      },
     ],
     repositoryUrl: "https://github.com/hermesgsc/money-plan",
     deployUrl: "https://money-plan.vercel.app/",
