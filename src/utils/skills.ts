@@ -9,7 +9,6 @@ const skillsData = [
   { name: "Prisma", icon: "lineicons:prisma" },
   { name: "React", icon: "uim:react" },
   { name: "Tailwind", icon: "lineicons:tailwindcss" },
-
 ];
 
 export default skillsData

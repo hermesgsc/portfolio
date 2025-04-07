@@ -4,6 +4,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import Card from "./Card";
 import Typography from "./Typography";
+import getAge from "@/utils/age";
 
 const AboutMe: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const AboutMe: React.FC = () => {
             weight="normal"
             align="left"
           >
-            I&apos;m 21 years old, and I&apos;m currently studying Systems
+            I&apos;m {getAge()} years old, and I&apos;m currently studying Systems
             Analysis and Development. I&apos;m a full-stack developer at
             BlackPay, working on both the frontend and backend, and I live in{" "}
             <strong className="text-green-600 font-medium ">Brazil</strong>. I
