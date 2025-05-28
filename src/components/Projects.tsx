@@ -20,39 +20,6 @@ interface Technology {
 
 export const projectsData: Project[] = [
   {
-    title: "Library - API",
-    description:
-      "A RESTful API built for managing book resources, enabling CRUD operations.",
-    technologies: [
-      {
-        name: "Node.js",
-        bg: "bg-green-300",
-        border: "border-green-500",
-        text: "text-green-900",
-      },
-      {
-        name: "Express",
-        bg: "bg-gray-300",
-        border: "border-gray-500",
-        text: "text-gray-900",
-      },
-      {
-        name: "MongoDB",
-        bg: "bg-green-300",
-        border: "border-green-500",
-        text: "text-green-900",
-      },
-      {
-        name: "JavaScript",
-        bg: "bg-yellow-300",
-        border: "border-yellow-500",
-        text: "text-yellow-900",
-      },
-    ],
-    repositoryUrl: "https://github.com/hermesgsc/books-api-rest",
-    deployUrl: "",
-  },
-  {
     title: "MoneyPlan",
     description:
       "MoneyPlan is a complete financial management tool that helps users track their income and expenses.",
@@ -62,6 +29,12 @@ export const projectsData: Project[] = [
         bg: "bg-cyan-300",
         border: "border-cyan-500",
         text: "text-cyan-900",
+      },
+      {
+        name: "React.js",
+        bg: "bg-teal-300",
+        border: "border-teal-800",
+        text: "text-teal-800",
       },
       {
         name: "Next.js",
@@ -82,7 +55,7 @@ export const projectsData: Project[] = [
   {
     title: "MoneyPlan - API",
     description:
-    "MoneyPlan is a complete financial management tool that helps users track their income and expenses.",
+      "MoneyPlan is a complete financial management tool that helps users track their income and expenses.",
     technologies: [
       {
         name: "TypeScript",
@@ -125,9 +98,7 @@ const Projects: React.FC = () => {
 
   return (
     <section className="p-0 md:p-6 bg-primary-800 flex items-center justify-center">
-<Card className="p-6 md:border-primary-500 w-full max-w-2xl mx-auto md:bg-primary-700 rounded-xl border-0 md:border-[0.1px] bg-primary-800">
-
-
+      <Card className="p-6 md:border-primary-500 w-full max-w-2xl mx-auto md:bg-primary-700 rounded-xl border-0 md:border-[0.1px] bg-primary-800">
         <div className="flex justify-between pb-4 p-6 text-primary-100">
           <Typography variant="subtitle" align="left" weight="bold">
             Projects
